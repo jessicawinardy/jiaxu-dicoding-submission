@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Duan Jiaxu</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Yuki's Page</h1>
+        </div>
+        <div class="nav-list">
+          <ul class="nav-list-items">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#trivia">Trivia</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="home" id="home">
+        <div class="home-image">
+          <img id="home-image" src="./assets/img/chenzheyuan.jpg" alt="" />
+        </div>
+        <div class="home-right">
+          <div class="home-title">
+            <h1>Duan Jiaxu</h1>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit.
+            </h3>
+          </div>
+          <div>
+            <a href="#about"
+              ><button id="home-button">GET TO KNOW HIM</button></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="content">
+          <article class="About" id="about">
+            <h1>Who is Duan Jiaxu?</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              doloremque inventore exercitationem. Soluta esse quaerat
+              voluptatum. Sint, officiis facere? Fuga obcaecati pariatur error
+              similique tempora! Excepturi dignissimos quam quis necessitatibus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              doloremque inventore exercitationem. Soluta esse quaerat
+              voluptatum. Sint, officiis facere? Fuga obcaecati pariatur error
+              similique tempora! Excepturi dignissimos quam quis necessitatibus.
+            </p>
+          </article>
+          <article class="Gallery" id="gallery">
+            <h1>Gallery</h1>
+            <div class="image-slider">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="assets/img/jiaxu1.jpg" style="width: 100%" />
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="assets/img/jiaxu2.jpg" style="width: 100%" />
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="assets/img/jiaxu3.jpg" style="width: 100%" />
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br />
+
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </article>
+          <article class="trivia" id="trivia">
+            <h1>Trivia</h1>
+            <h3>Trivia 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus aliquam nemo obcaecati autem vitae alias cumque
+              beatae at odio architecto ratione reprehenderit repellendus
+              necessitatibus asperiores nihil, quis voluptatum provident fugit.
+            </p>
+            <h3>Trivia 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus aliquam nemo obcaecati autem vitae alias cumque
+              beatae at odio architecto ratione reprehenderit repellendus
+              necessitatibus asperiores nihil, quis voluptatum provident fugit.
+            </p>
+            <h3>Trivia 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus aliquam nemo obcaecati autem vitae alias cumque
+              beatae at odio architecto ratione reprehenderit repellendus
+              necessitatibus asperiores nihil, quis voluptatum provident fugit.
+            </p>
+          </article>
+        </div>
+        <aside>
+          <h1>ABOUT ME</h1>
+          <img src="./assets/img/fotojes.png" alt="fotojes" />
+          <div class="author-name">
+            <h2>Jessica Winardy</h2>
+            <h4>Informatics Student</h4>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam harum
+            alias fugiat perferendis dicta aut voluptatum, molestias iste, illo
+            unde perspiciatis nemo quod, possimus fuga temporibus quibusdam rem
+            mollitia repellendus!
+          </p>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <p>Submission Pemrograman Web Dicoding &#169; 2023, jessicawinardy</p>
+    </footer>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
