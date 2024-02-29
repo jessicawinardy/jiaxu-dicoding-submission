@@ -16,14 +16,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(246, 241, 241);
+    background-color: #ebe7e4;
     padding: 2vh 4vh;
 }
 
 
 .logo h1{
     font-family: 'Quicksand', sans-serif;
-    color: #146C94;
+    color: #4D5468;
 }
 
 .nav-list-items{
@@ -39,22 +39,22 @@ nav{
 .nav-list-items li a {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
-    color: #146C94;
+    color: #4D5468;
     padding: 2vh;
     border-radius: 30px;
     font-size: 20px;
 }
 
 .nav-list-items li a:hover{
-    background-color: #0d4058;
-    color: rgb(246, 241, 241);
+    background-color: #4D5468;
+    color: #ebe7e4
 }
 
 .home{
     display: flex;
     align-items: center;
     padding: 0 4vh;
-    background-color: rgb(246, 241, 241);
+    background-color: #ebe7e4;
     height: 92vh;
 }
 
@@ -87,40 +87,40 @@ nav{
 
 .home-title h3{
     font-family: 'Quicksand', sans-serif;
-    color: rgb(25, 167, 206);
+    color: #7091eb;
     font-size: 24px;
 }
 .home-title h1{
     font-family: 'Quicksand', sans-serif;
-    color: #146C94;
+    color: #3a58aa;
     font-size: 72px;
 }
 
 #home-button{
     padding: 3vh 6vh;
     border-radius: 50px;
-    border: 3px solid #146C94;
-    background-color: #146C94;
+    border: 3px solid #3a58aa;
+    background-color: #3a58aa;
     font-size: 18px;
     font-weight: bold;
-    color: rgb(246, 241, 241);
+    color: #ebe7e4;
     box-shadow: 5px 5px 10px rgb(195, 195, 195);
     transition: 0.3s;
 }
 
 #home-button:hover{
-    background-color: rgb(246, 241, 241);
-    color: #146C94;
+    background-color: #ebe7e4;
+    color: #3a58aa;
 }
 
 #home-button:active{
-    background-color: #0d4058;
-    color:  rgb(246, 241, 241);
+    background-color: #3a58aa;
+    color:  #ebe7e4;
 }
 
 .main-content{
     display: flex;
-    background-color: rgb(246, 241, 241);
+    background-color: #ebe7e4;
 }
 
 .content{
@@ -136,7 +136,7 @@ article{
     flex-direction: column;
     gap: 2vh;
     padding: 5vh;
-    color: #146C94;
+    color: #3a58aa;
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     box-shadow: 5px 5px 10px rgb(195, 195, 195);
@@ -151,7 +151,13 @@ article h1{
 }
 
 article h3{
-    color: rgb(25, 167, 206);
+    color: #7091eb;
+}
+
+.trivia-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
 }
 
 aside{
@@ -161,19 +167,19 @@ aside{
     align-items: center;
     gap: 3vh;
     padding: 7vh;
-    background-color: #146C94;
+    background-color: #3a58aa;
     margin: 7vh;
     font-family: 'Quicksand', sans-serif;
-    color: rgb(246, 241, 241);
+    color: #ebe7e4;
     border-radius: 30px;
     max-height: 100vh;
-    box-shadow: 5px 5px 10px rgb(195, 195, 195);
+    box-shadow: 5px 5px 10px #ebe7e4;
 
 }
 
 aside p{
     text-align: justify;
-    color: rgb(246, 241, 241);
+    color: #ebe7e4;
 }
 
 aside img{
@@ -185,21 +191,22 @@ aside img{
     flex-direction: column;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
-    color: rgb(246, 241, 241);
+    color: #ebe7e4;
 }
 
 .author-name h4{
-    color: rgb(98, 193, 220);
+    color: #8aaaff;
 }
 
 footer{
     font-family: 'Quicksand', sans-serif;
-    background-color: #146C94;
-    color: rgb(246, 241, 241);
+    display: flex;
+    justify-content: center;
+    background-color: #4D5468;
+    color: #ebe7e4;
     padding: 5vh;
 }
 
-/* Image Slider*/
 .image-slider {
     max-width: 100vh;
     position: relative;
