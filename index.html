@@ -10,14 +10,14 @@
     <header>
       <nav>
         <div class="logo">
-          <h1>Yuki's Page</h1>
+          <h1>Love and Deepspace</h1>
         </div>
         <div class="nav-list">
           <ul class="nav-list-items">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#trivia">Trivia</a></li>
+            <li><a onclick="scrollToSection('home')">Home</a></li>
+            <li><a onclick="scrollToSection('about')">About</a></li>
+            <li><a onclick="scrollToSection('gallery')">Gallery</a></li>
+            <li><a onclick="scrollToSection('trivia')">Trivia</a></li>
           </ul>
         </div>
       </nav>
@@ -29,23 +29,22 @@
         </div>
         <div class="home-right">
           <div class="home-title">
-            <h1>Duan Jiaxu</h1>
+            <h1>Xavier</h1>
             <h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
-              dolor, sit amet consectetur adipisicing elit.
+              "My light only shines over you." <br>
+              - Xavier <br>
             </h3>
           </div>
           <div>
-            <a href="#about"
-              ><button id="home-button">GET TO KNOW HIM</button></a
-            >
+            <button id="home-button" onclick="scrollToSection('content')">
+              GET TO KNOW HIM
+            </button>
           </div>
         </div>
       </div>
       <div class="main-content">
-        <div class="content">
-          <article class="About" id="about">
+        <div class="content" id="content">
+          <article class="about" id="about">
             <h1>Who is Duan Jiaxu?</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
@@ -60,7 +59,7 @@
               similique tempora! Excepturi dignissimos quam quis necessitatibus.
             </p>
           </article>
-          <article class="Gallery" id="gallery">
+          <article class="gallery" id="gallery">
             <h1>Gallery</h1>
             <div class="image-slider">
               <div class="mySlides fade">
@@ -138,12 +137,10 @@
       let slideIndex = 1;
       showSlides(slideIndex);
 
-      // Next/previous controls
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
 
-      // Thumbnail image controls
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
@@ -166,6 +163,15 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+      }
+
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const offset = section.offsetTop - 50;
+        window.scrollTo({
+          top: offset,
+          behavior: "smooth",
+        });
       }
     </script>
   </body>
