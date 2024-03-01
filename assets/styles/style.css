@@ -18,8 +18,8 @@ nav{
     align-items: center;
     background-color: #ebe7e4;
     padding: 2vh 4vh;
+    overflow: hidden;
 }
-
 
 .logo h1{
     font-family: 'Quicksand', sans-serif;
@@ -174,7 +174,6 @@ aside{
     border-radius: 30px;
     max-height: 100vh;
     box-shadow: 5px 5px 10px #ebe7e4;
-
 }
 
 aside p{
@@ -207,7 +206,58 @@ footer{
     padding: 5vh;
 }
 
-.image-slider {
+.burger-menu {
+    cursor: pointer;
+    padding: 10px 15px;
+    float: right;
+    display: none;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #4D5468;
+    margin: 5px 0;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ebe7e4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu li {
+    display: block;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .menu li a {
+    color: #4D5468;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu li :hover {
+    background-color: #4D5468;
+    color: #ebe7e4;
+  }
+
+  .burger-menu.active + .menu {
+    display: block;
+  }
+
+  .image-slider {
     max-width: 100vh;
     position: relative;
     margin: auto;
@@ -276,11 +326,10 @@ footer{
     to {opacity: 1}
   }
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     nav{
-        flex-direction: column;
-        max-width: 768px;
-        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 3vh;
     }
 
@@ -307,4 +356,58 @@ footer{
     .main-content{
         flex-direction: column;
     }
+
+    .burger-menu {
+        display: block;
+        float: right;
+        padding: 10px 15px;
+        position: relative;
+    }
+    .nav-list-items {
+        display: none;
+    }
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        float: right;
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ebe7e4;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .menu li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .menu li a {
+        color: #4D5468;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        min-width: 25vw;
+        transition: background-color 0.3s;
+      }
+      
+      .menu li :hover {
+        background-color: #4D5468;
+        color: #ebe7e4;
+      }
+    
+      .burger-menu.active + .menu {
+        display: block;
+      }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All About Duan Jiaxu</title>
+    <title>Xiao Xing Xing</title>
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
@@ -20,6 +20,17 @@
             <li><a onclick="scrollToSection('trivia')">Trivia</a></li>
           </ul>
         </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+          <li><a onclick="scrollToSection('home')">Home</a></li>
+          <li><a onclick="scrollToSection('about')">About</a></li>
+          <li><a onclick="scrollToSection('gallery')">Gallery</a></li>
+          <li><a onclick="scrollToSection('trivia')">Trivia</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -143,10 +154,9 @@
             <h4>Informatics Student</h4>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam harum
-            alias fugiat perferendis dicta aut voluptatum, molestias iste, illo
-            unde perspiciatis nemo quod, possimus fuga temporibus quibusdam rem
-            mollitia repellendus!
+            I am a Computer Science student with a strong enthusiasm for ongoing
+            self-improvement. I consider myself a creative, disciplined, and
+            responsible individual.
           </p>
         </aside>
       </div>
@@ -197,6 +207,11 @@
           top: offset,
           behavior: "smooth",
         });
+      }
+
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("active");
       }
     </script>
   </body>
